@@ -1,4 +1,4 @@
-<img src="wwwroot/img/img1.jpg">
+<img src="wwwroot/img/img2.jpg">
 
 ## ASP .NET Core MVC + Razor
 
@@ -26,7 +26,7 @@ Projeto de gerenciamento de tarefas
 
 O sistema permite criar, editar, excluir e listar tarefas com campos como título, descrição, status, data de criação e data de finalização.
 
-<img src="wwwroot/img/img.jpg">
+<img src="wwwroot/img/img1.jpg">
 
 ## Funcionalidades
 
