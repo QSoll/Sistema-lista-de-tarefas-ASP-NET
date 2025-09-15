@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background: white;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    height: 100vh;
+    text-decoration: none;
+    margin: 0px;
+    padding: 0px;
+}
+
+/*NavSair*/
+.topbar {
+    width: 100%;
+    background-color: #090909;
+    color: white;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 48px;
+    margin: auto;
+    /*box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);*/
+    position: fixed;
+}
+
+.topbar-content {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: left;
+    align-items: center;
+
+}
+
+.button-top {
+    background-color: white;
+    padding: 10px;
+    width: auto;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px 0px 8px 0px;
+}
+
+.button-top:hover {
+    background-color: #85eeaf;
+    color: black;
+    font-weight: bolder;
+}
+
+/*Fim NavSair*/
+.zap {
+    width: 25px;
+    height: auto;
+    align-items: center;
+    padding: 2px;
+}
+
+/*Inicio header*/
+header {
+    margin-top: 48px;
+    width: 100%;
+    background-color: #f0f0f0;
+    text-align: center;
+}
+
+header img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/*Fim header*/
+
+
+
+/*inicio nav*/
+.hamburguer-nav {
+    background-color: #fff;
+    border-bottom: 1px solid #ccc;
+    padding: 10px;
+    text-decoration: none;
+}
+
+.hamburguer-header {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+   
+    
+}
+
+.hamburguer-icon {
+    font-size: 24px;
+    background: none;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+}
+
+.hamburguer-icon:hover {
+    font-size: 24px;
+    background-color: #86ccb0;
+    padding: 2px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.hamburguer-title {
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.hamburguer-menu {
+    display: none;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 10px;
+    
+}
+
+.menu-grupo {
+    display: flex;
+    flex-direction: column;
+}
+
+.submenu {
+    display: none;
+    flex-direction: column;
+    margin-left: 20px;
+    gap: 4px;
+}
+
+.button-sub {
+    width: auto;
+    background-color: #9ad0f4;
+    color: #0c78ca;
+    border: none;
+    padding: 6px 12px;
+    text-align: center;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+
+     text-decoration: none;
+}
+
+.button-sub:hover {
+    background-color: #2ca0e8;
+    color: black;
+    font-weight: bold;
+
+}
+
+
+/*final nav*/
+
+.page-container {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+main {
+    flex: 1;
+}
+
+
+hr {
+    margin: 40px 0px;
+}
+
+.hr-button {
+    margin: 5px 0px;
+}
+
+.form-buttons{
+    display:flex;
+    flex-direction: row;
+    gap:20px;/*distancia entre botoes*/
+    justify-content: center;
+    padding: 35px;
+}
+.button-a a {
+    color: rgb(10, 10, 10);
+    text-decoration: none;
+    padding: 8px;
+    
+}
+a 
+.button-a:hover {
+    color: rgb(241, 244, 243);
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.painel-funcionalidades {
+    padding: 30px 20px;
+    margin: 20px 10px;
+    border-radius: 40px;
+    color: #333;
+    line-height: 30px;
+    /*box-shadow: 0px 0px 6px 10px  rgba(0, 0, 0, 0.1);*/
+    font-size: large;
+}
+
+h2 {
+    text-align: center;
+    padding: 20px 0px;
+}
+
+.object-center {
+    text-align: center;
+    justify-content: center;
+    margin: auto;
+}
+
+.object-inline {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+form {
+    max-width: 450px;
+    margin: auto;
+}
+
+.formulario {
+    max-width: 450px;
+    margin: auto;
+}
+
+#painel-admin td:hover {
+    background-color: #cff3e6;
+}
+
+main {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    /* Centraliza horizontalmente */
+    align-items: center;
+}
+
+
+#tabela-estoque th,
+#tabela-estoque td,
+#tabela-pedidos th,
+#tabela-pedidos td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: left;
+}
+
+#tabela-estoque thead,
+#tabela-pedidos thead {
+    background-color: #f2f2f2;
+}
+
+
+
+input {
+    display: block;
+    margin: 10px 0;
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+
+}
+
+.input-quant {
+    width: 75px;
+    display: inline;
+}
+
+.pedido-quant {
+    display: inline;
+}
+
+.box {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    /*box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);*/
+    width: 100%;
+    max-width: 1000px;
+    /* Limita a largura para centralização */
+    text-align: center;
+    line-height: 45px;
+    margin: auto;
+}
+
+.button-project {
+    width: auto;
+    height: 32px;
+    /* altura fixa */
+    padding: 0 16px;
+    /* espaçamento lateral */
+    line-height: 32px;
+    /* centraliza o texto verticalmente */
+    font-size: 16px;
+    background-color: #9fd2c6;
+    color: black;
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.button-project:hover {
+    background: #005a9e;
+    font-weight: bold;
+    color: white;
+    font-weight: bold;
+}
+
+
+.navbar button {
+    padding: 6px 10px;
+    background-color: #a0c6bf;
+    color: rgb(41, 100, 71);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+    text-align: center;
+}
+
+.navbar button:hover {
+    background-color: #00b392;
+    color: white;
+    font-weight: bold;
+}
+
+footer {
+    width: 100%;
+    background-color: #080808;
+    color: rgb(246, 249, 248);
+    text-align: center;
+    padding: 50px 0px;
+    margin: 0px;
+    text-decoration: none;
+
+}
+footer a{
+    color:rgb(87, 238, 168);
+    text-decoration: none;
+}
+footer a:hover{
+    color: rgb(210, 206, 131);
+    font-weight: bolder;
+}
+footer img {
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+.foot-itens {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    line-height: 30px;
+    padding-bottom: 20px;
+}
+
+.foot-itens-esq {
+    text-align: left;
+    display: block;
+}
+
+.badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-weight: bold;
+    color: white;
+    font-size: 0.9em;
+}
+
+.badge-warning {
+    background-color: orange;
+}
+
+.badge-info {
+    background-color: teal;
+}
+
+.badge-primary {
+    background-color: blue;
+}
+
+.badge-success {
+    background-color: green;
+}
+
+.badge-danger {
+    background-color: red;
+}
+
+.badge-secondary {
+    background-color: gray;
+}
+
+.badge-dark {
+    background-color: black;
+}
+
+.badge-light {
+    background-color: #ccc;
+    color: black;
+}
+
+/*--------------------------*/
+
+@media (min-width: 768px) {
+    html {
+        font-size: 16px;
+    }
+}
+.bloco-texto{
+    padding: 10px;
+    line-height: 30px;
+    
+}
+.form-group{
+    padding: 10px;
+
+}
+
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+body {
+    margin-bottom: 60px;
+}
+
+.form-floating>.form-control-plaintext::placeholder,
+.form-floating>.form-control::placeholder {
+    color: var(--bs-secondary-color);
+    text-align: end;
+}
+
+.form-floating>.form-control-plaintext:focus::placeholder,
+.form-floating>.form-control:focus::placeholder {
+    text-align: start;
+}
+
+/*lista de tarefas*/
+.tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+.tabela th,
+.tabela td {
+    border: 1px solid #ccc;
+    padding: 10px;
+    text-align: left;
+}
+
+.tabela th {
+    background-color: #f2f2f2;
+}
+
+/*fim lista de tarefas*/

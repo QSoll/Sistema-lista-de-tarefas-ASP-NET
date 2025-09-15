@@ -1,0 +1,79 @@
+@model listaTarefas.Models.Tarefa
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="utf-8" />
+    <title>Excluir Tarefa</title>
+    <link rel="stylesheet" href="~/css/style.css" />
+    <link rel="stylesheet" href="~/css/style.css" asp-append-version="true" />
+    <script src="~/js/site.js" asp-append-version="true"></script>
+<script src="~/js/menu.js" asp-append-version="true"></script>
+
+
+</head>
+<body>
+    @await Html.PartialAsync("_NavSair")
+    @await Html.PartialAsync("_Header")
+    @await Html.PartialAsync("_Navbar")
+
+<div class="bloco-texto">  
+    <form asp-action="DeleteConfirmed" method="post">
+        <input type="hidden" asp-for="Id" />
+
+        <div class="form-group">
+            <label>Escolher tarefa para excluir</label>
+            <select id="tarefaSelect" asp-items="ViewBag.Tarefas" class="form-control">
+                <option value="">-- Selecione --</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label>Data de Criação</label>
+            <input asp-for="DataCriacao" class="form-control" type="date" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Título</label>
+            <input asp-for="Titulo" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Descrição</label>
+            <input asp-for="Descricao" class="form-control" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Data de Finalização</label>
+            <input asp-for="DataFinalizacao" class="form-control" type="date" readonly />
+        </div>
+
+        <div class="form-group">
+            <label>Status</label>
+            <input asp-for="Status" class="form-control" readonly />
+        </div>
+
+        <div class="object-inline">
+            <button type="submit" class="button-project">Excluir</button>
+            <a asp-action="Lista" class="button-project">Cancelar</a>
+        </div><br>
+    </form>
+    @await Html.PartialAsync("_Footer")
+    </div>
+
+    <script>
+        document.getElementById("tarefaSelect").addEventListener("change", function () {
+            const id = this.value;
+            if (id) {
+                window.location.href = "/Tarefa/Delete/" + id;
+            }
+        });
+    </script>
+
+
+
+</body>
+</html>

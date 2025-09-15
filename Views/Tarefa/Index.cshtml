@@ -1,0 +1,40 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Sistema - Lista de Tarefas</title>
+
+        <link rel="stylesheet" href="~/css/style.css" />
+        <link rel="stylesheet" href="~/listaTarefas.styles.css" asp-append-version="true" />
+    </head>
+
+    <body>
+        @await Html.PartialAsync("_NavEntrar")
+        @await Html.PartialAsync("_Header")
+
+        <div class="page-container">
+            <main>
+                <div class="box">
+                    <br />
+                    <h1>Sistema para armazenar e organizar tarefas</h1><BR />
+                    <h2>Não se esqueça do que é importante</h2><BR />
+                    <h3>Organize seus afazeres</h3><br>
+
+                    <h2>Deixe tudo anotado</h2>
+                    <h3>Aproveite melhor o seu tempo</h3><br>
+
+            </main>
+
+            @await Html.PartialAsync("_Footer")
+        </div>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/menu.js" asp-append-version="true"></script>
+    </body>
+
+</html>

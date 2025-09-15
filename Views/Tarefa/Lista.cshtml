@@ -1,0 +1,69 @@
+@model IEnumerable<Tarefa>
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Lista de Tarefas</title>
+        <link rel="stylesheet" href="~/css/style.css" />
+    </head>
+
+    <body>
+        <!-- Barra superior com WhatsApp e botão Sair -->
+        @await Html.PartialAsync("_NavSair")
+
+        <!-- Header com título ou logo -->
+        @await Html.PartialAsync("_Header")
+
+        <!-- Menu retrátil lateral -->
+        @await Html.PartialAsync("_Navbar")
+
+        <div class="page-container">
+            <main>
+                <div class="box">
+                    <h2>Lista de Tarefas</h2>
+
+                    <table class="tabela">
+                        <thead>
+                            <tr>
+                            <th>Data da postagem</th>
+                                <th>Título</th>
+                                <th>Descrição</th>
+                                <th>Status</th>
+                                <th>Data estimada</th>
+                                
+                            </tr>
+                        </thead>
+                        <tbody>
+                            @foreach (var tarefa in Model)
+{
+    <tr>
+        <td>@tarefa.DataCriacao.ToShortDateString()</td>
+        <td>@tarefa.Titulo</td>
+        <td>@tarefa.Descricao</td>
+        <td>@tarefa.Status</td>
+        <td>
+            @(tarefa.DataFinalizacao.HasValue 
+                ? tarefa.DataFinalizacao.Value.ToString("dd/MM/yyyy") 
+                : "—")
+        </td>
+    </tr>
+}
+
+                        </tbody>
+                    </table>
+                </div>
+            </main>
+
+            <!-- Rodapé -->
+            @await Html.PartialAsync("_Footer")
+        </div>
+
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/menu.js" asp-append-version="true"></script>
+    </body>
+
+</html>

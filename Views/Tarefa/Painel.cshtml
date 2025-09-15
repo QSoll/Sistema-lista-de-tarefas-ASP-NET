@@ -1,0 +1,46 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Painel - Lista de Tarefas</title>
+
+        <link rel="stylesheet" href="~/css/style.css" />
+    </head>
+
+    <body>
+        @await Html.PartialAsync("_NavSair")
+        @await Html.PartialAsync("_Header")
+        @await Html.PartialAsync("_Navbar")
+
+        @if (TempData["MensagemSucesso"] != null)
+{
+    <div class="alert alert-success">
+        @TempData["MensagemSucesso"]
+    </div>
+}
+
+
+
+        <div class="page-container">
+            <main>
+                <div class="box">
+                    <h1>Bem-vindo (a) !!!</h1>
+                    <br>
+                    <h2>Abra o menu e crie sua tarefa</h2>
+                </div>
+            </main>
+
+            @await Html.PartialAsync("_Footer")
+        </div>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/menu.js" asp-append-version="true"></script>
+    </body>
+
+</html>

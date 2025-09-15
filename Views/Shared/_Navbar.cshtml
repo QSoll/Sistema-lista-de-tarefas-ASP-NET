@@ -1,0 +1,22 @@
+<div class="hamburguer-nav">
+    <div class="hamburguer-header">
+        <button class="hamburguer-icon" id="menu-toggle">☰</button>
+        <span class="hamburguer-title">Menu</span>
+    </div>
+
+    <div id="hamburguer-menu" class="hamburguer-menu">
+        <!-- Botão Home -->
+        <a asp-controller="Tarefa" asp-action="Painel" class="button-project">Home</a>
+
+        <!-- Grupo Tarefa com submenu -->
+        <div class="menu-grupo">
+            <button class="button-project submenu-toggle" data-target="tarefa-submenu">Tarefa ▾</button>
+            <div id="tarefa-submenu" class="submenu">
+                <a asp-controller="Tarefa" asp-action="Lista" class="button-sub">Lista</a>
+                <a asp-controller="Tarefa" asp-action="Create" class="button-sub">Criar</a>
+                <a asp-controller="Tarefa" asp-action="EditPage" class="button-sub">Editar</a>
+                <a asp-controller="Tarefa" asp-action="DeletePage" class="button-sub">Excluir</a>
+            </div>
+        </div>
+    </div>
+</div>

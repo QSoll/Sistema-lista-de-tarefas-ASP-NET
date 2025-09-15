@@ -1,0 +1,44 @@
+@{
+    Layout = null;
+}
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+    <head>
+        <meta charset="utf-8" />
+        <title>Login - Lista de Tarefas - Bootcamp Avanade</title>
+        <link rel="stylesheet" href="~/css/style.css" />
+
+    </head>
+
+    <body>
+        @await Html.PartialAsync("_NavEntrar")
+        @await Html.PartialAsync("_Header")
+
+        <div class="page-container">
+            <main>
+                <div class="box">
+                    <h2>LOGIN</h2>
+
+                    <form asp-action="Login" method="post" class="formulario">
+                        <input type="email" name="email" placeholder="E-mail" required />
+                        <input type="password" name="senha" placeholder="Senha" required />
+                        <button type="submit" class="button-project">Entrar</button>
+                    </form>
+                    <p style="color: red">@ViewBag.Mensagem</p>
+
+
+
+                    <p style="color: red">@ViewBag.Mensagem</p>
+                </div>
+            </main>
+
+            @await Html.PartialAsync("_Footer")
+        </div>
+
+        <script src="~/lib/jquery/dist/jquery.min.js"></script>
+        <script src="~/js/site.js" asp-append-version="true"></script>
+        <script src="~/js/menu.js" asp-append-version="true"></script>
+    </body>
+
+</html>
