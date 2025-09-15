@@ -102,3 +102,5 @@ http://localhost:5294
 - Versão mobile com layout adaptado
 
 <img src="https://solmorcillo.com.br/imgs_public/logo_SM.jpg" width="100px" height="120px">
+
+<img src="wwwroot/img/banner1.jpg">
